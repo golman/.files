@@ -1,0 +1,5 @@
+[user]
+	name = George Golman
+	email = george.golman@gmail.com
+[credential]
+	helper = osxkeychain

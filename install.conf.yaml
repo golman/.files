@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: .zshrc
+    ~/.gitconfig: .gitconfig
+    ~/.wakatime.cfg: .wakatime.cfg
+    ~/.config/htop/htoprc:
+      create: true
+      path: htoprc
+
+- create:
+    - ~/Projects
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
