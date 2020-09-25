@@ -34,6 +34,15 @@ A collection of [ZSH frameworks, plugins, themes and tutorials](https://github.c
 
 [Clippy from Microsoft Office](https://github.com/Cosmo/Clippy) is back and runs on macOS! Written in Swift.
 
+###### using homebrew zsh instead of the macos system default
+```
+sudo vim /etc/shells
+```
+add `/usr/local/bin/zsh`
+```
+chsh -s /usr/local/bin/zsh
+```
+
 ###### reset launchpad
 ```
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock

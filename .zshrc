@@ -1,9 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-##export PATH=$HOME/bin:/usr/local/bin:$PATH
-##export PATH="/usr/local/opt/curl/bin:$PATH"
-##export PATH="/usr/local/opt/ruby/bin:$PATH"
-##export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-##export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/wget/bin/:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.8.jdk/Contents/Home'
 
 # Path to your oh-my-zsh installation.
@@ -131,6 +132,7 @@ export AUTO_NOTIFY_BODY="completed in %elapsed seconds with exit code %exit_code
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat='lolcat'
+alias vim='nvim'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias la='ls -laG'
