@@ -32,6 +32,8 @@ install [Starship: Cross-Shell Prompt](https://starship.rs/)
 
 A collection of [ZSH frameworks, plugins, themes and tutorials](https://github.com/unixorn/awesome-zsh-plugins)
 
+[Clippy from Microsoft Office](https://github.com/Cosmo/Clippy) is back and runs on macOS! Written in Swift.
+
 ###### reset launchpad
 ```
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
