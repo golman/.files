@@ -32,7 +32,9 @@ install [Starship: Cross-Shell Prompt](https://starship.rs/)
 
 A collection of [ZSH frameworks, plugins, themes and tutorials](https://github.com/unixorn/awesome-zsh-plugins)
 
-[Clippy from Microsoft Office](https://github.com/Cosmo/Clippy) is back and runs on macOS! Written in Swift.
+[Clippy from Microsoft Office](https://github.com/Cosmo/Clippy) is back and runs on macOS! Written in Swift
+
+Reset the [smc](https://support.apple.com/en-us/HT201295), [nvram or pram](https://support.apple.com/en-us/HT204063)
 
 ###### using homebrew zsh instead of the macos system default
 ```
@@ -147,7 +149,7 @@ find . -type f | xargs -n1 dos2unix
 find . -name '*.js' -type f -exec dos2unix {} \;
 ```
 
-###### create a catalina bootable installer other versions [here](https://support.apple.com/en-gb/HT201372)
+###### create a catalina bootable installer other versions [here](https://support.apple.com/en-us/HT201372)
 ```
 sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
 ```
