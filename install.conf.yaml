@@ -11,6 +11,9 @@
     ~/.config/htop/htoprc:
       create: true
       path: htoprc
+    ~/.config/starship.toml:
+      create: true
+      path: starship.toml
 
 - create:
     - ~/Projects
