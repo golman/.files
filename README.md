@@ -149,7 +149,7 @@ find . -type f | xargs -n1 dos2unix
 find . -name '*.js' -type f -exec dos2unix {} \;
 ```
 
-###### create a catalina bootable installer other versions [here](https://support.apple.com/en-us/HT201372)
+###### create a big sur bootable installer other versions [here](https://support.apple.com/en-us/HT201372)
 ```
-sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
 ```
