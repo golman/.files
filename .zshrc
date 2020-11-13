@@ -5,7 +5,7 @@ export PATH="/usr/local/opt/wget/bin/:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.8.jdk/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home'
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/golman/.oh-my-zsh"
