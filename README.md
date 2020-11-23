@@ -79,6 +79,11 @@ sudo find / -name '.DS_Store' -type f -delete
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 ```
 
+###### generate a new rsa ssh key pair
+```
+ssh-keygen -t rsa -b 2048 -C "george.golman@gmail.com"
+```
+
 ###### disable creation metadata files on network and usb volumes
 ```
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
