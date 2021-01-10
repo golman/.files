@@ -26,6 +26,8 @@ install [Starship: Cross-Shell Prompt](https://starship.rs/)
 
 [macOS Setup Guide](https://sourabhbajaj.com/mac-setup/)
 
+[kitty — the fast, featureful, GPU based terminal emulator](https://sw.kovidgoyal.net/kitty/index.html)
+
 [iTerm2 + zsh + oh-my-zsh + Material Design The Most Power Full Terminal on macOS](https://medium.com/@rafavinnce/iterm2-zsh-oh-my-zsh-material-design-the-most-power-full-terminal-on-macos-332b1ee364a5)
 
 [Spotify themes](https://github.com/morpheusthewhite/spicetify-themes) for [Spicetify](https://github.com/khanhas/spicetify-cli)
