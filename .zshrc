@@ -4,7 +4,7 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/wget/bin/:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home'
 
 # Path to your oh-my-zsh installation.
@@ -137,10 +137,13 @@ alias ls='ls -G'
 alias ll='ls -lG'
 alias la='ls -laG'
 alias af='curl -s  https://www.affirmations.dev/ | jq -r ".affirmation"'
+alias rlp='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'
 # for build project
 alias da="cd ~/Projects/veeam.com/ && mvn clean install -Denvironment.name=golman -DskipTests -Pdeploy-all"
+alias dat="cd ~/Projects/veeam.com/ && mvn clean install -Denvironment.name=golman -Pdeploy-all"
 alias dp="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Denvironment.name=golman -DskipTests -Pdeploy-package"
-alias gds="cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp5e3VKDag3wMpiCs5nnXKmvcyzbbpz7qVTm4eHw4CgABJS78yXbNpQrumwTvv1T9x7oERR"
+alias dpt="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Denvironment.name=golman -Pdeploy-package"
+alias gds="cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh"
 # for vpn
 alias vs="/opt/cisco/anyconnect/bin/vpn connect spbcvp.veeam.com"
 alias vp="/opt/cisco/anyconnect/bin/vpn connect prgcvp.veeam.com"
