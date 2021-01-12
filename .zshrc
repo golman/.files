@@ -143,7 +143,7 @@ alias da="cd ~/Projects/veeam.com/ && mvn clean install -Denvironment.name=golma
 alias dat="cd ~/Projects/veeam.com/ && mvn clean install -Denvironment.name=golman -Pdeploy-all"
 alias dp="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Denvironment.name=golman -DskipTests -Pdeploy-package"
 alias dpt="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Denvironment.name=golman -Pdeploy-package"
-alias gds="cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh"
+alias gds="cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp5e3VKDag3wMpiCs5nnXKmvcyzbbpz7qVTm4eHw4CgABJS78yXbNpQrumwTvv1T9x7oERR"
 # for vpn
 alias vs="/opt/cisco/anyconnect/bin/vpn connect spbcvp.veeam.com"
 alias vp="/opt/cisco/anyconnect/bin/vpn connect prgcvp.veeam.com"
