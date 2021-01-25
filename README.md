@@ -47,6 +47,18 @@ add `/usr/local/bin/zsh`
 chsh -s /usr/local/bin/zsh
 ```
 
+###### [using kitty as a custom terminal](https://25.wf/posts/2020-03-23-alfred-kitty.html) for [alfred](https://www.alfredapp.com/)
+```
+on alfred_script(q)
+	tell application "kitty" to activate
+	do shell script "/Applications/Kitty.app/Contents/MacOS/kitty @ --to unix:/tmp/mykitty new-window --new-tab"
+	tell application "System Events" to keystroke q
+	tell application "System Events"
+		key code 36 -- enter key
+	end tell
+end alfred_script
+```
+
 ###### reset launchpad
 ```
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
