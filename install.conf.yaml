@@ -23,6 +23,9 @@
     ~/.config/kitty/macos-launch-services-cmdline:
       create: true
       path: macos-launch-services-cmdline
+    ~/Library/Application Support/MTMR/items.json:
+      create: true
+      path: mtmr.json
 
 - create:
     - ~/Projects
