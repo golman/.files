@@ -233,7 +233,7 @@
   {
     "type": "music",
     "align": "right",
-    "width": 228,
+    "width": 220,
     "bordered": false,
     "refreshInterval": 1,
     "disableMarquee": true
@@ -241,7 +241,7 @@
   {
     "type": "weather",
     "align": "right",
-    "width": 42,
+    "width": 50,
     "icon_type": "text",
     "api_key": "ca93a0bb8cdb428552660d83249e4bc9",
     "bordered": false
