@@ -23,6 +23,9 @@
     ~/.config/kitty/macos-launch-services-cmdline:
       create: true
       path: macos-launch-services-cmdline
+    ~/.config/neofetch/config.conf:
+      create: true
+      path: neofetch.conf
     ~/Library/Application Support/MTMR/items.json:
       create: true
       path: mtmr.json
