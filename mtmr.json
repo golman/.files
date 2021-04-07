@@ -1,21 +1,14 @@
 [
   {
-    "type": "escape",
+    "type": "exitTouchbar",
     "align": "left",
-    "bordered": true,
-    "title": "⎋"
+    "title": ""
   },
   {
     "type": "group",
     "align": "left",
     "title": "☒",
     "items": [
-      {
-        "type": "escape",
-        "align": "left",
-        "bordered": true,
-        "title": "⎋"
-      },
       {
         "type": "close",
         "align": "left"
@@ -122,12 +115,6 @@
     "title": "▷",
     "items": [
       {
-        "type": "escape",
-        "align": "left",
-        "bordered": true,
-        "title": "⎋"
-      },
-      {
         "type": "close",
         "align": "left"
       },
@@ -149,7 +136,6 @@
       // Spotify
       {
         "type": "appleScriptTitledButton",
-        "align": "left",
         "source": {
           "inline": "if application \"Spotify\" is running then\rtell application \"Spotify\"\rif player state is playing then\rreturn (get artist of current track) & \" – \" & (get name of current track)\relse\rreturn \"\"\rend if\rend tell\rend if\rreturn \"\"\r"
         },
@@ -220,20 +206,11 @@
     ]
   },
   {
-    "type": "exitTouchbar",
-    "align": "left",
-    "title": ""
-  },
-  {
     "type": "dock",
-    "align": "left",
-    "width": 220,
-    "autoResize": false
+    "autoResize": true
   },
   {
     "type": "music",
-    "align": "right",
-    "width": 220,
     "bordered": false,
     "refreshInterval": 1,
     "disableMarquee": true
