@@ -47,7 +47,7 @@ add `/usr/local/bin/zsh`
 chsh -s /usr/local/bin/zsh
 ```
 
-###### [using kitty as a custom terminal](https://25.wf/posts/2020-03-23-alfred-kitty.html) for [alfred](https://www.alfredapp.com/)
+###### [using kitty as a custom terminal](https://25.wf/posts/2020-03-23-alfred-kitty.html) for [alfred](https://www.alfredapp.com)
 ```
 on alfred_script(q)
 	tell application "kitty" to activate
@@ -57,6 +57,11 @@ on alfred_script(q)
 		key code 36 -- enter key
 	end tell
 end alfred_script
+```
+
+###### [using iterm2 as a custom terminal](https://github.com/vitorgalvao/custom-alfred-iterm-scripts) for [alfred](https://www.alfredapp.com)
+```
+curl --silent 'https://raw.githubusercontent.com/vitorgalvao/custom-alfred-iterm-scripts/master/custom_iterm_script.applescript' | pbcopy
 ```
 
 ###### reset launchpad
