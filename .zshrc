@@ -1,10 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH="/usr/local/opt/wget/bin/:$PATH"
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="/usr/local/opt/wget/bin:$PATH"
+export PATH="/usr/local/opt/node@14/bin:$PATH"
+export PATH="/usr/local/opt/python@3.9/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home'
 
 # Path to your oh-my-zsh installation.
@@ -138,12 +140,18 @@ alias ll='ls -lG'
 alias la='ls -laG'
 alias af='curl -s  https://www.affirmations.dev/ | jq -r ".affirmation"'
 alias rlp='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'
+alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 # for build project
-alias da="cd ~/Projects/veeam.com/ && mvn clean install -Denvironment.name=golman -DskipTests -Pdeploy-all"
-alias dat="cd ~/Projects/veeam.com/ && mvn clean install -Denvironment.name=golman -Pdeploy-all"
-alias dp="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Denvironment.name=golman -DskipTests -Pdeploy-package"
-alias dpt="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Denvironment.name=golman -Pdeploy-package"
-alias gds="cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp5e3VKDag3wMpiCs5nnXKmvcyzbbpz7qVTm4eHw4CgABJS78yXbNpQrumwTvv1T9x7oERR"
+alias da="cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironment.name=golman -DskipTests"
+alias dat="cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironment.name=golman"
+alias dp="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Pdeploy-package -Denvironment.name=golman -DskipTests"
+alias dpt="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Pdeploy-package -Denvironment.name=golman"
+alias dfull='cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironment.name=golman -DskipTests && mvn clean install -Pdeploy-all -Denvironment.name=golman -Daem.port=4503 -DskipTests'
+alias dconf='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.config/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
+alias dpolicy='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.policy/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
+alias dusers='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.users/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
+alias dworkflows='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.workflows/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
+alias dgds='cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp5e3VKDag3wMpiCs5nnXKmvcyzbbpz7qVTm4eHw4CgABJS78yXbNpQrumwTvv1T9x7oERR'
 # for vpn
 alias vs="/opt/cisco/anyconnect/bin/vpn connect spbcvp.veeam.com"
 alias vp="/opt/cisco/anyconnect/bin/vpn connect prgcvp.veeam.com"
