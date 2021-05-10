@@ -81,6 +81,7 @@ plugins=(
   brew
   colored-man-pages
   colorize
+  fzf
   git
   golang
   gulp
