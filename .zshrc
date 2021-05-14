@@ -5,6 +5,7 @@ export PATH="/usr/local/opt/wget/bin:$PATH"
 export PATH="/usr/local/opt/node@14/bin:$PATH"
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/openvpn/sbin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home'
