@@ -17,9 +17,9 @@ install [Starship: Cross-Shell Prompt](https://starship.rs/)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ###### honk!
-0. copy: `extra/Honk.aiff` to the `/Library/Audio/Sounds/Alerts/`
+0. copy: `honk.aiff` to the `/Library/Audio/Sounds/Alerts/`
 1. open System Preferences > Sound > Sound Effects
-2. select "Honk"
+2. select "honk"
 3. HONK
 
 ### macOS useful terminal commands and links
