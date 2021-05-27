@@ -8,6 +8,9 @@
     ~/.zshrc: .zshrc
     ~/.gitconfig: .gitconfig
     ~/.wakatime.cfg: .wakatime.cfg
+    ~/.config/fish/config.fish:
+      create: true
+      path: config.fish
     ~/.config/htop/htoprc:
       create: true
       path: htoprc
