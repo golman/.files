@@ -10,11 +10,40 @@ install [Oh My Zsh](https://ohmyz.sh/)
 
 install [Starship: Cross-Shell Prompt](https://starship.rs/)
 
+###### using homebrew zsh or fish instead of the macos system default
+```
+sudo vim /etc/shells
+```
+add `/usr/local/bin/zsh` and `/usr/local/bin/fish`
+```
+chsh -s /usr/local/bin/zsh
+```
+or
+```
+chsh -s /usr/local/bin/fish
+```
+
 ###### plugins for oh-my-zsh
 * [zsh-auto-notify](https://github.com/MichaelAquilina/zsh-auto-notify)
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * [zsh-completions](https://github.com/zsh-users/zsh-completions)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+###### plugins for fish
+* [A curation of prompts, plugins, & resources for Fish](https://github.com/jorgebucaran/awsm.fish)
+* [A plugin manager for Fish](https://github.com/jorgebucaran/fisher)
+* [A fish-shell package to automatically receive notifications when long processes finish](https://github.com/franciscolourenco/done)
+* [Make your prompt asynchronous to improve the reactivity](https://github.com/acomagu/fish-async-prompt)
+* [Pure-fish z directory jumping](https://github.com/jethrokuan/z)
+* [Augment your fish command line with fzf key bindings](https://github.com/PatrickF1/fzf.fish)
+* [sudope plugin for Fisher. Quickly put 'sudo' in your command](https://github.com/Dimentium/plugin-sudope)
+
+```
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+```
+```
+fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z PatrickF1/fzf.fish Dimentium/plugin-sudope
+```
 
 ###### honk!
 0. copy: `honk.aiff` to the `/Library/Audio/Sounds/Alerts/`
@@ -37,15 +66,6 @@ A collection of [ZSH frameworks, plugins, themes and tutorials](https://github.c
 [Clippy from Microsoft Office](https://github.com/Cosmo/Clippy) is back and runs on macOS! Written in Swift
 
 Reset the [smc](https://support.apple.com/en-us/HT201295), [nvram or pram](https://support.apple.com/en-us/HT204063)
-
-###### using homebrew zsh instead of the macos system default
-```
-sudo vim /etc/shells
-```
-add `/usr/local/bin/zsh`
-```
-chsh -s /usr/local/bin/zsh
-```
 
 ###### [using kitty as a custom terminal](https://25.wf/posts/2020-03-23-alfred-kitty.html) for [alfred](https://www.alfredapp.com)
 ```
