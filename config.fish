@@ -9,7 +9,7 @@ set -gx PATH /usr/local/opt/openvpn/sbin $PATH
 set -gx PATH ~/Library/Python/3.9/bin $PATH
 set -gx PATH ~/.local/share/gem/ruby/3.0.0/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
-set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home $JAVA_HOME
+set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.0.11.jdk/Contents/Home $JAVA_HOME
 
 abbr vim 'nvim'
 abbr cat 'lolcat'
