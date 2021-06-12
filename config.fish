@@ -38,6 +38,7 @@ abbr vs '/opt/cisco/anyconnect/bin/vpn connect spbcvp.veeam.com'
 abbr vp '/opt/cisco/anyconnect/bin/vpn connect prgcvp.veeam.com'
 abbr vd '/opt/cisco/anyconnect/bin/vpn disconnect'
 abbr vc '/opt/cisco/anyconnect/bin/vpn status'
+abbr ovpn 'sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/client.ovpn'
 # connect to vps
 abbr cs 'ssh golman.cis.local -l golman'
 abbr cvs 'ssh ggolman.spb.cisdev.local -l golman'
