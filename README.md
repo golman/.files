@@ -25,9 +25,21 @@ chsh -s /usr/local/bin/fish
 
 ###### plugins for oh-my-zsh
 * [zsh-auto-notify](https://github.com/MichaelAquilina/zsh-auto-notify)
+```
+git clone https://github.com/MichaelAquilina/zsh-auto-notify.git $ZSH_CUSTOM/plugins/auto-notify
+```
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
 * [zsh-completions](https://github.com/zsh-users/zsh-completions)
+```
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+```
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
 
 ###### plugins for fish
 * [A curation of prompts, plugins, & resources for Fish](https://github.com/jorgebucaran/awsm.fish)
