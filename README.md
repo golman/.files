@@ -79,6 +79,11 @@ A collection of [ZSH frameworks, plugins, themes and tutorials](https://github.c
 
 Reset the [smc](https://support.apple.com/en-us/HT201295), [nvram or pram](https://support.apple.com/en-us/HT204063)
 
+###### Start [AutoRaise](https://github.com/sbmpost/AutoRaise) as service
+```
+brew services start autoraise
+```
+
 ###### [using kitty as a custom terminal](https://25.wf/posts/2020-03-23-alfred-kitty.html) for [alfred](https://www.alfredapp.com)
 ```
 on alfred_script(q)

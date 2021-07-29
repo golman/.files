@@ -8,6 +8,9 @@
     ~/.zshrc: .zshrc
     ~/.gitconfig: .gitconfig
     ~/.wakatime.cfg: .wakatime.cfg
+    ~/.config/AutoRaise/config:
+      create: true
+      path: autoraise.cfg
     ~/.config/bat/config:
       create: true
       path: bat.config
