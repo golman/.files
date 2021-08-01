@@ -7,7 +7,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/openvpn/sbin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.11.jdk/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home'
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/golman/.oh-my-zsh"
