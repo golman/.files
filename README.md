@@ -71,6 +71,8 @@ fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z Pat
 
 [iTerm2 + zsh + oh-my-zsh + Material Design The Most Power Full Terminal on macOS](https://medium.com/@rafavinnce/iterm2-zsh-oh-my-zsh-material-design-the-most-power-full-terminal-on-macos-332b1ee364a5)
 
+[How to use sudo with Touch ID on your Mac](https://www.imore.com/how-use-sudo-your-mac-touch-id)
+
 [Spotify themes](https://github.com/morpheusthewhite/spicetify-themes) for [Spicetify](https://github.com/khanhas/spicetify-cli)
 
 A collection of [ZSH frameworks, plugins, themes and tutorials](https://github.com/unixorn/awesome-zsh-plugins)
