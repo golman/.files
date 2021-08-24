@@ -1,0 +1,48 @@
+{
+  ;; C  | left_command  ;; Q  | right_command
+  ;; T  | left_control  ;; W  | right_control
+  ;; O  | left_option   ;; E  | right_option
+  ;; S  | left_shift    ;; R  | right_shift
+  ;; F  | fn            ;; !! | command + control + optional + shift (hyper)
+  ;; !  | mandatory     ;; #  | optional (single)  ;; ## | optional any
+
+  :profiles       {
+                    :default  {
+                                :default true
+                                :sim     50
+                                :delay   500
+                                :alone   1000
+                                :held    500
+                              }
+                  }
+
+  :input-sources  {
+                    :en {:input_source_id "^com.apple.keylayout.US$"}
+                    :ru {:input_source_id "^com.apple.keylayout.Russian$"}
+                  }
+
+  :devices        {
+                    :apple [{:vendor_id 1452, :product_id 635}]
+                  }
+
+  :templates      {
+                    :yabai-message "yabai -m %s"
+                  }
+
+  :main [
+          {:des "Change input source to English by left_command; Russian by right_command."
+           :rules [
+                    [:left_command  :left_command  nil {:alone {:input :en}}]
+                    [:right_command :right_command nil {:alone {:input :ru}}]
+                  ]
+
+          }
+
+          {:des "Section sign (§) to Escape and fn + Section sign (§) to Section sign (§)."
+           :rules [:apple
+                    [:non_us_backslash :escape]
+                    [:!Fnon_us_backslash :non_us_backslash]
+                  ]
+          }
+        ]
+}

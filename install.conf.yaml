@@ -29,9 +29,9 @@
     ~/.config/kitty/kitty.conf:
       create: true
       path: kitty.conf
-    ~/.config/karabiner/karabiner.json:
+    ~/.config/karabiner.edn:
       create: true
-      path: karabiner.json
+      path: karabiner.edn
     ~/.config/kitty/macos-launch-services-cmdline:
       create: true
       path: macos-launch-services-cmdline
