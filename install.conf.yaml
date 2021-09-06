@@ -8,9 +8,6 @@
     ~/.zshrc: .zshrc
     ~/.gitconfig: .gitconfig
     ~/.wakatime.cfg: .wakatime.cfg
-    ~/.config/AutoRaise/config:
-      create: true
-      path: autoraise.cfg
     ~/.config/bat/config:
       create: true
       path: bat.config
@@ -26,21 +23,18 @@
     ~/.config/starship.toml:
       create: true
       path: starship.toml
-    ~/.config/kitty/kitty.conf:
-      create: true
-      path: kitty.conf
     ~/.config/karabiner.edn:
       create: true
       path: karabiner.edn
+    ~/.config/kitty/kitty.conf:
+      create: true
+      path: kitty.conf
     ~/.config/kitty/macos-launch-services-cmdline:
       create: true
       path: macos-launch-services-cmdline
     ~/.config/neofetch/config.conf:
       create: true
       path: neofetch.conf
-    ~/Library/Application Support/MTMR/items.json:
-      create: true
-      path: mtmr.json
 
 - create:
     - ~/Projects
