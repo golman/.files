@@ -88,6 +88,7 @@
                     [:x               [:open-app "Spotify"]]
                     [:c               [:open-app "Calendar"]]
                     [:b               [:open-app "Brave Browser"]]
+                    [:close_bracket   ["bash ~/Projects/dotfiles/openconnect.sh toggle"]]
                   ]
           }
         ]
