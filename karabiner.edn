@@ -26,7 +26,12 @@
                   }
 
   :templates      {
-                    :yabai-message "yabai -m %s"
+                    :open       "open \"%s\""
+                    :open-app   "open -a \"%s\""
+                  }
+
+  :layers         {
+                    :launch-mode    {:key :tab}
                   }
 
   :main [
@@ -35,13 +40,54 @@
                     [:left_command  :left_command  nil {:alone {:input :en}}]
                     [:right_command :right_command nil {:alone {:input :ru}}]
                   ]
-
           }
 
           {:des "Section sign (§) to Escape and fn + Section sign (§) to Section sign (§)."
            :rules [:apple
-                    [:non_us_backslash :escape]
+                    [:non_us_backslash :grave_accent_and_tilde]
+                    [:!Cnon_us_backslash :!Cgrave_accent_and_tilde]
+                    [:!Tnon_us_backslash :!Tgrave_accent_and_tilde]
                     [:!Fnon_us_backslash :non_us_backslash]
+                  ]
+          }
+
+          {:des "Caps Lock to Hyper, alone to Escape"
+           :rules [
+                    [:caps_lock :!CTOleft_shift nil {:alone :escape}]
+                  ]
+          }
+
+          {:des "Map hyper+hjkl to arrows"
+           :rules [
+                    [:!!h :left_arrow]
+                    [:!!j :down_arrow]
+                    [:!!k :up_arrow]
+                    [:!!l :right_arrow]
+                  ]
+          }
+
+          {:des "Run applications"
+           :rules [
+                    [:!Creturn_or_enter [:open-app "iTerm"]]
+                    [:!Qreturn_or_enter [:open-app "iTerm"]]
+                  ]
+          }
+
+          {:des "Run applications in launch mode"
+           :rules [:launch-mode
+                    [:return_or_enter [:open-app "Terminal"]]
+                    [:w               [:open-app "Brave Browser"]]
+                    [:e               [:open-app "Telegram"]]
+                    [:t               [:open-app "Finder"]]
+                    [:a               [:open-app "iTerm"]]
+                    [:s               [:open-app "Sublime Text"]]
+                    [:d               [:open-app "IntelliJ IDEA"]]
+                    [:f               [:open-app "Fork"]]
+                    [:m               [:open-app "Mail"]]
+                    [:o               [:open-app "Microsoft Teams"]]
+                    [:x               [:open-app "Spotify"]]
+                    [:c               [:open-app "Calendar"]]
+                    [:b               [:open-app "Brave Browser"]]
                   ]
           }
         ]
