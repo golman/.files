@@ -1,3 +1,4 @@
+tap "candid82/brew"
 tap "clementtsang/bottom"
 tap "homebrew/cask-fonts"
 tap "mdogan/zulu"
