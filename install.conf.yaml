@@ -1,5 +1,6 @@
 - defaults:
     link:
+      create: true
       relink: true
 
 - clean: ['~']
@@ -40,4 +41,6 @@
     - ~/Projects
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+  - [git submodule update --init --recursive, — installing submodules]
+  - [brew bundle, — installing brew software]
+  - [npm install --global npm-check-updates license-checker, — installing npm global packages]
