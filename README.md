@@ -14,7 +14,12 @@ install [Starship: Cross-Shell Prompt](https://starship.rs/)
 ```
 sudo vim /etc/shells
 ```
-add `/usr/local/bin/zsh` and `/usr/local/bin/fish`
+add 
+```
+/usr/local/bin/zsh
+/usr/local/bin/fish
+```
+run
 ```
 chsh -s /usr/local/bin/zsh
 ```
@@ -39,6 +44,10 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+* [a native zsh port of z.sh](https://github.com/agkozak/zsh-z)
+```
+git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 ```
 
 ###### plugins for fish
@@ -81,11 +90,6 @@ A collection of [ZSH frameworks, plugins, themes and tutorials](https://github.c
 
 Reset the [smc](https://support.apple.com/en-us/HT201295), [nvram or pram](https://support.apple.com/en-us/HT204063)
 
-###### Start [AutoRaise](https://github.com/sbmpost/AutoRaise) as service
-```
-brew services start autoraise
-```
-
 ###### [using kitty as a custom terminal](https://25.wf/posts/2020-03-23-alfred-kitty.html) for [alfred](https://www.alfredapp.com)
 ```
 on alfred_script(q)
@@ -118,7 +122,7 @@ defaults write com.apple.dock springboard-rows -int 5
 
 ###### global packages
 ```
-npm i -g npm npm-check-updates
+npm install --global npm-check-updates
 ```
 
 ###### remove all .ds_store files
@@ -212,7 +216,7 @@ find . -type f | xargs -n1 dos2unix
 find . -name '*.js' -type f -exec dos2unix {} \;
 ```
 
-###### create a big sur bootable installer other versions [here](https://support.apple.com/en-us/HT201372)
+###### create a monterey bootable installer. other versions [here](https://support.apple.com/en-us/HT201372)
 ```
-sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
 ```

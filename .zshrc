@@ -98,6 +98,7 @@ plugins=(
   zsh-autosuggestions
   zsh-completions
   zsh-syntax-highlighting
+  zsh-z
 )
 
 source $ZSH/oh-my-zsh.sh
