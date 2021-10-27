@@ -53,12 +53,15 @@
 
           {:des "Caps Lock to Hyper, alone to Escape"
            :rules [
-                    [:caps_lock :!CTOleft_shift nil {:alone :escape}]
+                    [:caps_lock   :!CTOleft_shift nil {:alone :escape}]
+                    [:!Ccaps_lock :!Cescape]
+                    [:!Qcaps_lock :!Qescape]
                   ]
           }
 
           {:des "Map hyper+hjkl to arrows"
            :rules [
+                    [:!!d :delete_forward]
                     [:!!h :left_arrow]
                     [:!!j :down_arrow]
                     [:!!k :up_arrow]
@@ -76,13 +79,14 @@
           {:des "Run applications in launch mode"
            :rules [:launch-mode
                     [:return_or_enter [:open-app "Terminal"]]
-                    [:w               [:open-app "Brave Browser"]]
+                    [:w               [:open-app "Safari"]]
                     [:e               [:open-app "Telegram"]]
+                    [:r               [:open-app "iTerm"]]
                     [:t               [:open-app "Finder"]]
-                    [:a               [:open-app "iTerm"]]
                     [:s               [:open-app "Sublime Text"]]
                     [:d               [:open-app "IntelliJ IDEA"]]
                     [:f               [:open-app "Fork"]]
+                    [:g               [:open-app "Google Chrome"]]
                     [:m               [:open-app "Mail"]]
                     [:o               [:open-app "Microsoft Teams"]]
                     [:x               [:open-app "Spotify"]]
