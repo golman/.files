@@ -14,7 +14,7 @@ install [Starship: Cross-Shell Prompt](https://starship.rs/)
 ```
 sudo vim /etc/shells
 ```
-add 
+add
 ```
 /usr/local/bin/zsh
 /usr/local/bin/fish
@@ -110,6 +110,14 @@ curl --silent 'https://raw.githubusercontent.com/vitorgalvao/custom-alfred-iterm
 ###### reset launchpad
 ```
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+```
+
+##### show dock after delay (in seconds)
+```
+defaults write com.apple.Dock autohide-delay -float 13; killall Dock
+```
+```
+defaults delete com.apple.Dock autohide-delay; killall Dock
 ```
 
 ###### launchpad columns and rows
