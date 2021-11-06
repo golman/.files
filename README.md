@@ -107,6 +107,14 @@ end alfred_script
 curl --silent 'https://raw.githubusercontent.com/vitorgalvao/custom-alfred-iterm-scripts/master/custom_iterm_script.applescript' | pbcopy
 ```
 
+###### add [devicons](https://github.com/alexanderjeurissen/ranger_devicons) plugin to [ranger](https://ranger.github.io/)
+```
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+```
+```
+echo "default_linemode devicons" >> ~/.config/ranger/rc.conf
+```
+
 ###### reset launchpad
 ```
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
