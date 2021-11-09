@@ -85,10 +85,10 @@ plugins=(
   git
   golang
   gulp
+  macos
   mvn
   node
   npm
-  osx
   python
   ruby
   sudo
