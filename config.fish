@@ -33,12 +33,8 @@ abbr dpolicy 'cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.policy/ && mvn 
 abbr dusers 'cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.users/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 abbr dworkflows 'cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.workflows/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 abbr dgds 'cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp5e3VKDag3wMpiCs5nnXKmvcyzbbpz7qVTm4eHw4CgABJS78yXbNpQrumwTvv1T9x7oERR'
-# for vpn
-abbr vs '/opt/cisco/anyconnect/bin/vpn connect spbcvp.veeam.com'
-abbr vp '/opt/cisco/anyconnect/bin/vpn connect prgcvp.veeam.com'
-abbr vd '/opt/cisco/anyconnect/bin/vpn disconnect'
-abbr vc '/opt/cisco/anyconnect/bin/vpn status'
-abbr ovpn 'sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/client.ovpn'
+# connect to vpn
+abbr vc 'sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/client.ovpn'
 # connect to vps
 abbr cs 'ssh golman.cis.local -l golman'
 abbr cvs 'ssh ggolman.spb.cisdev.local -l golman'

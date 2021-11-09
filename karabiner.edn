@@ -93,7 +93,6 @@
                     [:x               [:open-app "Spotify"]]
                     [:c               [:open-app "Visual Studio Code"]]
                     [:b               [:open-app "Brave Browser"]]
-                    [:close_bracket   ["bash ~/Projects/dotfiles/openconnect.sh toggle"]]
                   ]
           }
         ]

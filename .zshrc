@@ -154,11 +154,8 @@ alias dpolicy='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.policy/ && mvn
 alias dusers='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.users/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 alias dworkflows='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.workflows/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 alias dgds='cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp5e3VKDag3wMpiCs5nnXKmvcyzbbpz7qVTm4eHw4CgABJS78yXbNpQrumwTvv1T9x7oERR'
-# for vpn
-alias vs="/opt/cisco/anyconnect/bin/vpn connect spbcvp.veeam.com"
-alias vp="/opt/cisco/anyconnect/bin/vpn connect prgcvp.veeam.com"
-alias vd="/opt/cisco/anyconnect/bin/vpn disconnect"
-alias vc="/opt/cisco/anyconnect/bin/vpn status"
+# connect to vpn
+alias vc='sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/client.ovpn'
 # connect to vps
 alias cs="ssh golman.cis.local -l golman"
 alias cvs="ssh ggolman.spb.cisdev.local -l golman"
