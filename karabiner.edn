@@ -76,6 +76,23 @@
                   ]
           }
 
+          {:des "Function keys"
+           :rules [
+                    [:!F1          :f1]
+                    [:!F2          :f2]
+                    [:!F3          :f3]
+                    [:!F4          :f4]
+                    [:!F5          :f5]
+                    [:!F6          :f6]
+                    [:!F7          :f7]
+                    [:!F8          :f8]
+                    [:!F9          :f9]
+                    [:!F0          :f10]
+                    [:!Fhyphen     :f11]
+                    [:!Fequal_sign :f12]
+                  ]
+          }
+
           {:des "Run applications in launch mode"
            :rules [:launch-mode
                     [:return_or_enter [:open-app "Terminal"]]
@@ -93,6 +110,7 @@
                     [:x               [:open-app "Spotify"]]
                     [:c               [:open-app "Visual Studio Code"]]
                     [:b               [:open-app "Brave Browser"]]
+                    [:close_bracket   [:open-app "Cisco AnyConnect Secure Mobility Client"]]
                   ]
           }
         ]
