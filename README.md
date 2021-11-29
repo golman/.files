@@ -128,6 +128,11 @@ defaults write com.apple.Dock autohide-delay -float 13; killall Dock
 defaults delete com.apple.Dock autohide-delay; killall Dock
 ```
 
+###### show app switcher on all displays
+```
+defaults write com.apple.Dock appswitcher-all-displays -bool true; killall Dock
+```
+
 ###### launchpad columns and rows
 ```
 defaults write com.apple.dock springboard-columns -int 10
