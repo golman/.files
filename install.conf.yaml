@@ -16,13 +16,7 @@
       path: config.fish
     ~/.config/htop/htoprc:
       create: true
-      path: htoprc
-    ~/.config/mc/ini:
-      create: true
-      path: midnight-commander
-    ~/.config/starship.toml:
-      create: true
-      path: starship.toml
+      path: htoprc.cfg
     ~/.config/karabiner.edn:
       create: true
       path: karabiner.edn
@@ -31,10 +25,16 @@
       path: kitty.conf
     ~/.config/kitty/macos-launch-services-cmdline:
       create: true
-      path: macos-launch-services-cmdline
+      path: kitty.cmd
+    ~/.config/mc/ini:
+      create: true
+      path: mc.ini
     ~/.config/neofetch/config.conf:
       create: true
       path: neofetch.conf
+    ~/.config/starship.toml:
+      create: true
+      path: starship.toml
 
 - create:
     - ~/Projects
