@@ -7,7 +7,7 @@
   ;; !  | mandatory     ;; #  | optional (single)  ;; ## | optional any
 
   :profiles       {
-                    :default  {
+                    :Default  {
                                 :default true
                                 :sim     50
                                 :delay   500
@@ -28,6 +28,7 @@
   :templates      {
                     :open       "open \"%s\""
                     :open-app   "open -a \"%s\""
+                    :choice-app "if [ $(hostname) = 'CIS-PRG10036.local' ] ; then  open -a \"%s\" ; else open -a \"%s\" ; fi"
                   }
 
   :layers         {
@@ -44,7 +45,7 @@
 
           {:des "Section sign (§) to Escape and fn + Section sign (§) to Section sign (§)."
            :rules [:apple
-                    [:non_us_backslash :grave_accent_and_tilde]
+                    [:non_us_backslash   :grave_accent_and_tilde]
                     [:!Cnon_us_backslash :!Cgrave_accent_and_tilde]
                     [:!Tnon_us_backslash :!Tgrave_accent_and_tilde]
                     [:!Fnon_us_backslash :non_us_backslash]
@@ -66,6 +67,13 @@
                     [:!!j :down_arrow]
                     [:!!k :up_arrow]
                     [:!!l :right_arrow]
+                  ]
+          }
+
+          {:des "Snippets"
+           :rules [
+                    [:!Fopen_bracket   [:g :e :o :r :g :e :period :g :o :l :m :a :n :!S2 :g :m :a :i :l :period :c :o :m]]
+                    [:!Fclose_bracket  [:g :r :i :g :o :r :i :i :period :g :o :l :m :a :n :!S2 :v :e :e :a :m :period :c :o :m]]
                   ]
           }
 
@@ -95,22 +103,25 @@
 
           {:des "Run applications in launch mode"
            :rules [:launch-mode
-                    [:return_or_enter [:open-app "Terminal"]]
-                    [:w               [:open-app "Safari"]]
-                    [:e               [:open-app "Telegram"]]
-                    [:r               [:open-app "iTerm"]]
-                    [:t               [:open-app "Finder"]]
-                    [:a               [:open-app "Calendar"]]
-                    [:s               [:open-app "Sublime Text"]]
-                    [:d               [:open-app "IntelliJ IDEA"]]
-                    [:f               [:open-app "Firefox"]]
-                    [:g               [:open-app "Fork"]]
-                    [:m               [:open-app "Mail"]]
-                    [:o               [:open-app "Microsoft Teams"]]
-                    [:x               [:open-app "Spotify"]]
-                    [:c               [:open-app "Visual Studio Code"]]
-                    [:b               [:open-app "Brave Browser"]]
-                    [:close_bracket   [:open-app "Cisco AnyConnect Secure Mobility Client"]]
+                    [:return_or_enter [:open-app   "Terminal"]]
+                    [:1               [:open-app   "1Password 7"]]
+                    [:w               [:choice-app "Brave Browser" "Safari"]]
+                    [:e               [:open-app   "Telegram"]]
+                    [:r               [:open-app   "iTerm"]]
+                    [:t               [:open-app   "Finder"]]
+                    [:a               [:choice-app "Postman" "Paw"]]
+                    [:s               [:choice-app "Sublime Text" "Visual Studio Code"]]
+                    [:d               [:open-app   "IntelliJ IDEA"]]
+                    [:f               [:open-app   "Fork"]]
+                    [:g               [:open-app   "Garmin Express"]]
+                    [:m               [:open-app   "Mail"]]
+                    [:o               [:open-app   "Microsoft Teams"]]
+                    [:p               [:choice-app "Adobe Photoshop 2022" "Pixelmator Pro"]]
+                    [:z               [:open-app   "zoom.us"]]
+                    [:x               [:open-app   "Spotify"]]
+                    [:c               [:open-app   "Calendar"]]
+                    [:b               [:choice-app "Safari" "Brave Browser"]]
+                    [:close_bracket   [:open-app   "Cisco AnyConnect Secure Mobility Client"]]
                   ]
           }
         ]
