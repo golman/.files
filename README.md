@@ -8,8 +8,6 @@ install [Homebrew](https://brew.sh/) 'n' run `brew bundle`
 
 install [Oh My Zsh](https://ohmyz.sh/)
 
-install [Starship: Cross-Shell Prompt](https://starship.rs/)
-
 ###### using homebrew zsh or fish instead of the macos system default
 ```
 sudo vim /etc/shells
@@ -80,6 +78,10 @@ fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z Pat
 
 [iTerm2 + zsh + oh-my-zsh + Material Design The Most Power Full Terminal on macOS](https://medium.com/@rafavinnce/iterm2-zsh-oh-my-zsh-material-design-the-most-power-full-terminal-on-macos-332b1ee364a5)
 
+[Starship: Cross-Shell Prompt](https://github.com/starship/starship) — [The minimal, blazing-fast, and infinitely customizable prompt for any shell!](https://starship.rs/)
+
+[NvChad](https://github.com/NvChad/NvChad) — [An attempt to make neovim cli as functional as an IDE while being very beautiful, blazing fast](https://nvchad.github.io/)
+
 [How to use sudo with Touch ID on your Mac](https://www.imore.com/how-use-sudo-your-mac-touch-id)
 
 [Spotify themes](https://github.com/morpheusthewhite/spicetify-themes) for [Spicetify](https://github.com/khanhas/spicetify-cli)
@@ -113,6 +115,11 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 ```
 ```
 echo "default_linemode devicons" >> ~/.config/ranger/rc.conf
+```
+
+###### launch [sublime text](https://www.sublimetext.com/) from the command-line via `subl`
+```
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
 ###### reset launchpad
