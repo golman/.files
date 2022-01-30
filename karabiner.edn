@@ -22,7 +22,8 @@
                   }
 
   :devices        {
-                    :apple [{:vendor_id 1452, :product_id 635}]
+                    :apple    [{:vendor_id 1452, :product_id 635}]
+                    :keychron [{:vendor_id 1452, :product_id 591}]
                   }
 
   :templates      {
@@ -49,6 +50,12 @@
                     [:!Cnon_us_backslash :!Cgrave_accent_and_tilde]
                     [:!Tnon_us_backslash :!Tgrave_accent_and_tilde]
                     [:!Fnon_us_backslash :non_us_backslash]
+                  ]
+          }
+
+          {:des "Rules for Keychron keyboard"
+           :rules [:keychron
+                    [:right_control :right_option]
                   ]
           }
 
