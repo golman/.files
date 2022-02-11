@@ -2,7 +2,7 @@
 
 powered by [dotbot](https://github.com/anishathalye/dotbot)
 
-clone and run `./install`
+clone and run `./install.sh`
 
 install [Homebrew](https://brew.sh/) 'n' run `brew bundle`
 
