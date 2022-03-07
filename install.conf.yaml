@@ -35,6 +35,9 @@
     ~/.config/starship.toml:
       create: true
       path: starship.toml
+    ~/.config/tmux/tmux.conf:
+      create: true
+      path: tmux.conf
 
 - create:
     - ~/Projects
