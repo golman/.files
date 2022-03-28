@@ -5,8 +5,20 @@ powered by [dotbot](https://github.com/anishathalye/dotbot)
 clone and run `./install.sh`
 
 install [Homebrew](https://brew.sh/) 'n' run `brew bundle`
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 install [Oh My Zsh](https://ohmyz.sh/)
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+install [NvChad](https://nvchad.github.io/)
+```
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+```
 
 ###### using homebrew zsh or fish instead of the macos system default
 ```
