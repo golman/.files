@@ -37,6 +37,6 @@ abbr dgds 'cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp5e3
 abbr vc 'sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/client.ovpn'
 # connect to vps
 abbr cs 'ssh golman.cis.local -l golman'
-abbr cvs 'ssh ggolman.spb.cisdev.local -l golman'
+abbr cvs 'ssh node.inf-01.ggolman.dev.prg.esx.cis.local -l golman'
 
 starship init fish | source
