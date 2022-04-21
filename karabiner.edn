@@ -19,6 +19,7 @@
   :input-sources  {
                     :en {:input_source_id "^com.apple.keylayout.US$"}
                     :ru {:input_source_id "^com.apple.keylayout.Russian$"}
+                    :cs {:input_source_id "^com.apple.keylayout.Czech$"}
                   }
 
   :devices        {
@@ -39,8 +40,14 @@
   :main [
           {:des "Change input source to English by left_command; Russian by right_command."
            :rules [
-                    [:left_command  :left_command  nil {:alone {:input :en}}]
-                    [:right_command :right_command nil {:alone {:input :ru}}]
+                    [:left_command    :left_command    nil {:alone {:input :en}}]
+                    [:right_command   :right_command   nil {:alone {:input :ru}}]
+                    [:left_shift      :left_shift      nil {:alone {:input :en}}]
+                    [:right_shift     :right_shift     nil {:alone {:input :ru}}]
+                    [:!Cright_command :!Cright_command nil {:alone {:input :cs}}]
+                    [:!Qleft_command  :!Qleft_command  nil {:alone {:input :cs}}]
+                    [:!Sright_shift   :!Sright_shift   nil {:alone {:input :cs}}]
+                    [:!Rleft_shift    :!Rleft_shift    nil {:alone {:input :cs}}]
                   ]
           }
 
