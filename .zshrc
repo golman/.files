@@ -153,7 +153,7 @@ alias dconf='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.config/ && mvn c
 alias dpolicy='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.policy/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 alias dusers='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.users/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 alias dworkflows='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.workflows/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
-alias dgds='cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp5e3VKDag3wMpiCs5nnXKmvcyzbbpz7qVTm4eHw4CgABJS78yXbNpQrumwTvv1T9x7oERR'
+alias dgds='cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp8mYUzMmwLoS3o7hN1rjwyAWoQWC41dmUwFtPJVWur6EVjqsBwo8hBfmCnmT8fGtsiHHDC'
 # connect to vpn
 alias vc='sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/client.ovpn'
 # connect to vps
