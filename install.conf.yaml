@@ -32,12 +32,6 @@
     ~/.config/neofetch/config.conf:
       create: true
       path: neofetch.conf
-    ~/.config/nvim/lua/custom/init.lua:
-      create: true
-      path: nvim/init.lua
-    ~/.config/nvim/lua/custom/custom.lua:
-      create: true
-      path: nvim/chadrc.lua
     ~/.config/starship.toml:
       create: true
       path: starship.toml
