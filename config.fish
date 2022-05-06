@@ -39,4 +39,6 @@ abbr vc 'sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/clie
 abbr cs 'ssh golman.cis.local -l golman'
 abbr cvs 'ssh node.inf-01.ggolman.dev.prg.esx.cis.local -l golman'
 
+thefuck --alias | source
+
 starship init fish | source

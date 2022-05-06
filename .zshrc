@@ -160,6 +160,8 @@ alias vc='sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/cli
 alias cs="ssh golman.cis.local -l golman"
 alias cvs="ssh node.inf-01.ggolman.dev.prg.esx.cis.local -l golman"
 
+eval $(thefuck --alias)
+
 eval "$(starship init zsh)"
 
 autoload -U compinit && compinit
