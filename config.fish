@@ -10,6 +10,10 @@ set -gx PATH ~/Library/Python/3.9/bin $PATH
 set -gx PATH ~/.local/share/gem/ruby/3.0.0/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+set -gx GOPATH ~/Projects/golang
+set -gx GOROOT /usr/local/opt/go/libexec
+set -gx PATH $GOPATH/bin $PATH
+set -gx PATH $GOROOT/bin $PATH
 
 abbr vim 'nvim'
 abbr cat 'lolcat'
