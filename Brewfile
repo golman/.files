@@ -1,3 +1,4 @@
+# 'brew tap'
 tap "buo/cask-upgrade"
 tap "candid82/brew"
 tap "clementtsang/bottom"
@@ -6,6 +7,7 @@ tap "mdogan/zulu"
 tap "rs/tap"
 tap "teamookla/speedtest"
 tap "yqrashawn/goku"
+# 'brew install'
 brew "angband"
 brew "awscli"
 brew "bat"
@@ -96,6 +98,9 @@ brew "xh"
 brew "zenith"
 brew "zoxide"
 brew "zsh"
+# 'brew install --cask'
+cask "brave-browser"
+cask "firefox"
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
 cask "font-cascadia-mono"
@@ -105,5 +110,25 @@ cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
+cask "fork"
+cask "ilya-birman-typography-layout"
+cask "intellij-idea"
+cask "iterm2"
+cask "karabiner-elements"
 cask "kitty"
+cask "pock"
+cask "raycast"
+cask "spotify"
+cask "steam"
+cask "telegram"
+cask "visual-studio-code"
+cask "zoom"
 cask "zulu-jdk11"
+# 'mas install'
+mas "Amphetamine", id: 937984704
+mas "Bitwarden", id: 1352778147
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Vimari", id: 1480933944
+mas "Xcode", id: 497799835
