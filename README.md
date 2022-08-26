@@ -16,8 +16,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 install [NvChad](https://nvchad.github.io/)
 ```
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ```
 
 ###### using homebrew zsh or fish instead of the macos system default
