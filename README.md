@@ -255,7 +255,7 @@ find . -type f | xargs -n1 dos2unix
 find . -name '*.js' -type f -exec dos2unix {} \;
 ```
 
-###### create a monterey bootable installer. other versions [here](https://support.apple.com/en-us/HT201372)
+###### create a ventura bootable installer. other versions [here](https://support.apple.com/en-us/HT201372)
 ```
-sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
 ```
