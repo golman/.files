@@ -2,10 +2,11 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/wget/bin:$PATH"
-export PATH="/usr/local/opt/python@3.9/bin:$PATH"
+export PATH="/usr/local/opt/node@18/bin:$PATH"
+export PATH="/usr/local/opt/python@3/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/openvpn/sbin:$PATH"
-export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
+# export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
 
@@ -77,7 +78,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  auto-notify
   brew
   colored-man-pages
   colorize
@@ -88,6 +88,7 @@ plugins=(
   macos
   mvn
   node
+  notify
   npm
   python
   ruby
@@ -112,10 +113,11 @@ HISTFILE=~/.zsh_history
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Set threshold and message for notifier
-export AUTO_NOTIFY_THRESHOLD=3
-export AUTO_NOTIFY_TITLE="%command"
-export AUTO_NOTIFY_BODY="completed in %elapsed seconds with exit code %exit_code"
+# Set message for notifier
+zstyle ':notify:*' error-icon "https://media3.giphy.com/media/10ECejNtM1GyRy/200_s.gif"
+zstyle ':notify:*' error-title "wow such #fail"
+zstyle ':notify:*' success-icon "https://s-media-cache-ak0.pinimg.com/564x/b5/5a/18/b55a1805f5650495a74202279036ecd2.jpg"
+zstyle ':notify:*' success-title "very #success. wow"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -135,7 +137,7 @@ export AUTO_NOTIFY_BODY="completed in %elapsed seconds with exit code %exit_code
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cat='lolcat'
+alias cat='bat'
 alias vim='nvim'
 alias ls='ls -G'
 alias ll='ls -lG'
@@ -148,19 +150,17 @@ alias da="cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironme
 alias dat="cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironment.name=golman"
 alias dp="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Pdeploy-package -Denvironment.name=golman -DskipTests"
 alias dpt="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Pdeploy-package -Denvironment.name=golman"
-alias dfull='cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironment.name=golman -DskipTests && mvn clean install -Pdeploy-all -Denvironment.name=golman -Daem.port=4503 -DskipTests'
+alias dfull='cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all,deploy-all-publish -DskipTests -Denvironment.name=golman -Daem.port=4502 -Daem.publish.port=4503'
 alias dconf='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.config/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 alias dpolicy='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.policy/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 alias dusers='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.users/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 alias dworkflows='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.workflows/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
 alias dgds='cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp8mYUzMmwLoS3o7hN1rjwyAWoQWC41dmUwFtPJVWur6EVjqsBwo8hBfmCnmT8fGtsiHHDC'
 # connect to vpn
-alias vc='sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Files/client.ovpn'
+alias vc='sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/client.ovpn'
 # connect to vps
 alias cs="ssh golman.cis.local -l golman"
 alias cvs="ssh node.inf-01.ggolman.dev.prg.esx.cis.local -l golman"
-
-eval $(thefuck --alias)
 
 eval "$(starship init zsh)"
 

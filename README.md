@@ -38,25 +38,25 @@ chsh -s /usr/local/bin/fish
 ```
 
 ###### plugins for oh-my-zsh
-* [zsh-auto-notify](https://github.com/MichaelAquilina/zsh-auto-notify)
+* [Desktop notifications for long-running commands in zsh](https://github.com/marzocchi/zsh-notify)
 ```
-git clone https://github.com/MichaelAquilina/zsh-auto-notify.git $ZSH_CUSTOM/plugins/auto-notify
+git clone git@github.com:marzocchi/zsh-notify.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/notify
 ```
-* [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+* [Fish-like autosuggestions for zsh](https://github.com/zsh-users/zsh-autosuggestions)
 ```
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
-* [zsh-completions](https://github.com/zsh-users/zsh-completions)
+* [Additional completion definitions for Zsh](https://github.com/zsh-users/zsh-completions)
 ```
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
-* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+* [Fish shell like syntax highlighting for Zsh](https://github.com/zsh-users/zsh-syntax-highlighting)
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
-* [a native zsh port of z.sh](https://github.com/agkozak/zsh-z)
+* [A native Zsh port of z.sh with added features](https://github.com/agkozak/zsh-z)
 ```
-git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+git clone https://github.com/agkozak/zsh-z.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
 ```
 
 ###### plugins for fish
@@ -161,7 +161,7 @@ defaults write com.apple.dock springboard-rows -int 5
 
 ###### global packages
 ```
-npm install --global npm-check-updates
+npm install --global npm-check-updates license-checker
 ```
 
 ###### remove all .ds_store files

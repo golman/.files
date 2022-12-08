@@ -22,15 +22,9 @@
                     :cs {:input_source_id "^com.apple.keylayout.Czech$"}
                   }
 
-  :devices        {
-                    :apple    [{:vendor_id 1452, :product_id 635}]
-                    :keychron [{:vendor_id 1452, :product_id 591}]
-                  }
-
   :templates      {
                     :open       "open \"%s\""
                     :open-app   "open -a \"%s\""
-                    :choice-app "if [ $(hostname) = 'CIS-PRG10036.local' ] ; then  open -a \"%s\" ; else open -a \"%s\" ; fi"
                   }
 
   :layers         {
@@ -51,21 +45,6 @@
                   ]
           }
 
-          {:des "Section sign (§) to Escape and fn + Section sign (§) to Section sign (§)."
-           :rules [:apple
-                    [:non_us_backslash   :grave_accent_and_tilde]
-                    [:!Cnon_us_backslash :!Cgrave_accent_and_tilde]
-                    [:!Tnon_us_backslash :!Tgrave_accent_and_tilde]
-                    [:!Fnon_us_backslash :non_us_backslash]
-                  ]
-          }
-
-          {:des "Rules for Keychron keyboard"
-           :rules [:keychron
-                    [:right_control :right_option]
-                  ]
-          }
-
           {:des "Caps Lock to Hyper, alone to Escape"
            :rules [
                     [:caps_lock   :!CTOleft_shift nil {:alone :escape}]
@@ -74,7 +53,7 @@
                   ]
           }
 
-          {:des "Map hyper+hjkl to arrows"
+          {:des "Map hyper+hjkl to arrows, hyper+d to delete"
            :rules [
                     [:!!d :delete_forward]
                     [:!!h :left_arrow]
@@ -118,24 +97,26 @@
           {:des "Run applications in launch mode"
            :rules [:launch-mode
                     [:return_or_enter [:open-app   "Terminal"]]
-                    [:1               [:open-app   "1Password 7"]]
-                    [:w               [:choice-app "Brave Browser" "Safari"]]
+                    [:w               [:open-app   "Brave Browser"]]
                     [:e               [:open-app   "Telegram"]]
                     [:r               [:open-app   "iTerm"]]
                     [:t               [:open-app   "Finder"]]
-                    [:a               [:choice-app "Postman" "Paw"]]
-                    [:s               [:choice-app "Sublime Text" "Visual Studio Code"]]
+                    [:a               [:open-app   "RapidAPI"]]
+                    [:s               [:open-app   "Visual Studio Code"]]
                     [:d               [:open-app   "IntelliJ IDEA"]]
                     [:f               [:open-app   "Fork"]]
                     [:g               [:open-app   "Garmin Express"]]
+                    [:h               [:open-app   "Home"]]
                     [:m               [:open-app   "Mail"]]
+                    [:i               [:open-app   "1Password 7"]]
                     [:o               [:open-app   "Microsoft Teams"]]
-                    [:p               [:choice-app "Adobe Photoshop 2022" "Pixelmator Pro"]]
+                    [:p               [:open-app   "Pixelmator Pro"]]
                     [:z               [:open-app   "zoom.us"]]
                     [:x               [:open-app   "Spotify"]]
                     [:c               [:open-app   "Calendar"]]
-                    [:b               [:choice-app "Safari" "Brave Browser"]]
-                    [:close_bracket   [:open-app   "Cisco AnyConnect Secure Mobility Client"]]
+                    [:b               [:open-app   "Safari"]]
+                    [:open_bracket    [:open-app   "Steam"]]
+                    [:close_bracket   [:open-app   "Cisco Secure Client"]]
                   ]
           }
         ]
