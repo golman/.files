@@ -75,6 +75,14 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z PatrickF1/fzf.fish Dimentium/plugin-sudope
 ```
 
+###### enabling touch id authorization for sudo
+```bash
+sudo vim /etc/pam.d/sudo
+```
+```
+auth       sufficient     pam_tid.so
+```
+
 ###### honk!
 0. copy: `honk.aiff` to the `/Library/Audio/Sounds/Alerts/`
 1. open System Preferences > Sound > Sound Effects
@@ -82,6 +90,8 @@ fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z Pat
 3. HONK
 
 ### macOS useful terminal commands and links
+
+https://www.jwillikers.com/backup-and-restore-a-gpg-key
 
 [macOS Setup Guide](https://sourabhbajaj.com/mac-setup/)
 
