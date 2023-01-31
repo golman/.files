@@ -11,7 +11,7 @@ set -gx PATH ~/Library/Python/3.10/bin $PATH
 set -gx PATH ~/.local/share/gem/ruby/3.0.0/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
-set -gx GOPATH ~/Projects/golang
+set -gx GOPATH ~/Projects/go
 set -gx GOROOT /usr/local/opt/go/libexec
 set -gx PATH $GOPATH/bin $PATH
 set -gx PATH $GOROOT/bin $PATH
@@ -22,6 +22,7 @@ abbr пше 'git'
 abbr ls 'ls -G'
 abbr ll 'ls -lG'
 abbr la 'ls -laG'
+abbr tm 'tmux attach -t default || tmux new -s default'
 abbr af 'curl -s  https://www.affirmations.dev/ | jq -r ".affirmation"'
 abbr bubu 'brew update && brew outdated && brew upgrade && brew cleanup'
 abbr genpass 'LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy'
