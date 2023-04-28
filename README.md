@@ -91,8 +91,6 @@ auth       sufficient     pam_tid.so
 
 ### macOS useful terminal commands and links
 
-https://www.jwillikers.com/backup-and-restore-a-gpg-key
-
 [macOS Setup Guide](https://sourabhbajaj.com/mac-setup/)
 
 [kitty — the fast, featureful, GPU based terminal emulator](https://sw.kovidgoyal.net/kitty/index.html)
@@ -104,6 +102,8 @@ https://www.jwillikers.com/backup-and-restore-a-gpg-key
 [NvChad](https://github.com/NvChad/NvChad) — [An attempt to make neovim cli as functional as an IDE while being very beautiful, blazing fast](https://nvchad.github.io/)
 
 [How to use sudo with Touch ID on your Mac](https://www.imore.com/how-use-sudo-your-mac-touch-id)
+
+[Backup and Restore GPG key](https://www.jwillikers.com/backup-and-restore-a-gpg-key)
 
 [Spotify themes](https://github.com/morpheusthewhite/spicetify-themes) for [Spicetify](https://github.com/khanhas/spicetify-cli)
 
@@ -136,6 +136,13 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 ```
 ```
 echo "default_linemode devicons" >> ~/.config/ranger/rc.conf
+```
+
+###### IntelliJ IDEA hide path in the project tree
+
+Help → Edit Custom Properties… → add the following
+```
+project.tree.structure.show.url=false
 ```
 
 ###### launch [sublime text](https://www.sublimetext.com/) from the command-line via `subl`
