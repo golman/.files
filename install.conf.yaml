@@ -38,6 +38,12 @@
     ~/.config/tmux/tmux.conf:
       create: true
       path: tmux.conf
+    ~/.warp/themes/nord.yaml:
+      create: true
+      path: ./warp themes/nord.yaml
+    ~/.warp/themes/one_dark.yaml:
+      create: true
+      path: ./warp themes/one_dark.yaml
 
 - create:
     - ~/Projects
