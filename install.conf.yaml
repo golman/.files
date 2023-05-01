@@ -32,6 +32,12 @@
     ~/.config/neofetch/config.conf:
       create: true
       path: neofetch.conf
+    ~/.vimrc:
+      create: true
+      path: init.vim
+    ~/.config/ranger/rc.conf:
+      create: true
+      path: ranger.config
     ~/.config/starship.toml:
       create: true
       path: starship.toml
