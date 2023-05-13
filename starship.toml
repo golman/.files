@@ -1,14 +1,69 @@
+[battery]
+full_symbol = '󰁹 '
+charging_symbol = '󰂄 '
+discharging_symbol = '󰂃 '
+unknown_symbol = '󰂑 '
+empty_symbol = '󱊡 '
+
 [[battery.display]]  # "bold red" style when capacity is between 0% and 10%
 threshold = 10
 style = "bold red"
+charging_symbol = '󰢜 '
+discharging_symbol = '󰁺 '
 
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+[[battery.display]]  # "bold red" style when capacity is between 10% and 20%
+threshold = 20
+style = "bold red"
+charging_symbol = '󰂆 '
+discharging_symbol = '󰁻 '
+
+[[battery.display]]  # "bold yellow" style when capacity is between 20% and 30%
 threshold = 30
 style = "bold yellow"
+charging_symbol = '󰂇 '
+discharging_symbol = '󰁼 '
 
-[[battery.display]]  # "bold green" style when capacity is between 30% and 100%
+[[battery.display]]  # "bold yellow" style when capacity is between 30% and 40%
+threshold = 40
+style = "bold yellow"
+charging_symbol = '󰂈 '
+discharging_symbol = '󰁽 '
+
+[[battery.display]]  # "bold yellow" style when capacity is between 40% and 50%
+threshold = 50
+style = "bold yellow"
+charging_symbol = '󰢝 '
+discharging_symbol = '󰁾 '
+
+[[battery.display]]  # "bold green" style when capacity is between 50% and 60%
+threshold = 60
+style = "bold green"
+charging_symbol = '󰂉 '
+discharging_symbol = '󰁿 '
+
+[[battery.display]]  # "bold green" style when capacity is between 60% and 70%
+threshold = 70
+style = "bold green"
+charging_symbol = '󰢞 '
+discharging_symbol = '󰂀 '
+
+[[battery.display]]  # "bold green" style when capacity is between 70% and 80%
+threshold = 80
+style = "bold green"
+charging_symbol = '󰂊 '
+discharging_symbol = '󰂁 '
+
+[[battery.display]]  # "bold green" style when capacity is between 80% and 90%
+threshold = 90
+style = "bold green"
+charging_symbol = '󰂋 '
+discharging_symbol = '󰂂 '
+
+[[battery.display]]  # "bold green" style when capacity is between 90% and 100%
 threshold = 100
 style = "bold green"
+charging_symbol = '󰂅 '
+discharging_symbol = '󰁹 '
 
 [character]
 success_symbol = '[❯](bold green)'
@@ -43,7 +98,7 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = " "
+read_only = ""
 # home_symbol = "󰶅 "
 home_symbol = " "
 truncation_length = 13
@@ -51,7 +106,7 @@ truncation_symbol = '…/'
 # truncate_to_repo = false
 
 [directory.substitutions]
-"Documents" = " "
+"Documents" = "󰈙 "
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
@@ -89,6 +144,9 @@ symbol = "⌘ "
 [hg_branch]
 symbol = " "
 
+[hostname]
+ssh_symbol = " "
+
 [java]
 # symbol = " "
 # symbol = "󰇷 "
@@ -101,13 +159,13 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 
 [meson]
 symbol = "喝 "
 
 [nim]
-symbol = " "
+symbol = " "
 
 [nix_shell]
 symbol = " "
@@ -116,10 +174,12 @@ symbol = " "
 symbol = " "
 
 [os.symbols]
+Alpaquita = " "
 Alpine = " "
 Amazon = " "
 Android = " "
 Arch = " "
+Artix = " "
 CentOS = " "
 Debian = " "
 DragonFly = " "
@@ -130,8 +190,9 @@ FreeBSD = " "
 Garuda = "﯑ "
 Gentoo = " "
 HardenedBSD = "ﲊ "
-Illumos = " "
+Illumos = " "
 Linux = " "
+Mabox = " "
 Macos = " "
 Manjaro = " "
 Mariner = " "
@@ -139,10 +200,10 @@ MidnightBSD = " "
 Mint = " "
 NetBSD = " "
 NixOS = " "
-OpenBSD = " "
+OpenBSD = " "
 openSUSE = " "
 OracleLinux = " "
-Pop = " "
+Pop = " "
 Raspbian = " "
 Redhat = " "
 RedHatEnterprise = " "
@@ -151,10 +212,10 @@ Solus = "ﴱ "
 SUSE = " "
 Ubuntu = " "
 Unknown = " "
-Windows = " "
+Windows = "󰨡 "
 
 [package]
-symbol = " "
+symbol = "󰏖 "
 
 [pijul_channel]
 symbol = "🪺 "
