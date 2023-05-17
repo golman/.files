@@ -178,7 +178,7 @@ defaults write com.apple.dock springboard-rows -int 5
 
 ###### global packages
 ```
-npm install --global npm-check-updates license-checker
+npm install --global npm-check-updates license-checker all-the-package-names
 ```
 
 ###### remove all .ds_store files
@@ -257,11 +257,6 @@ curl -s  https://www.affirmations.dev/ | jq -r ".affirmation"
 ###### generate secure password and copy to clipboard
 ```
 LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
-```
-
-###### open link from tweetbot directly
-```
-defaults write com.tapbots.TweetbotMac OpenURLsDirectly YES
 ```
 
 ###### convert line endings in files
