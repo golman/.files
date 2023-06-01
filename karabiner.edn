@@ -17,6 +17,8 @@
                   }
 
   :input-sources  {
+                    :en_typo {:input_source_id "org.sil.ukelele.keyboardlayout.t.english-ilyabirmantypography"}
+                    :ru_typo {:input_source_id "org.sil.ukelele.keyboardlayout.t.russian-ilyabirmantypography"}
                     :en {:input_source_id "^com.apple.keylayout.US$"}
                     :ru {:input_source_id "^com.apple.keylayout.Russian$"}
                     :cs {:input_source_id "^com.apple.keylayout.Czech$"}
@@ -25,6 +27,11 @@
   :templates      {
                     :open       "open \"%s\""
                     :open-app   "open -a \"%s\""
+                    :paste "osascript -e '
+                              set the clipboard to \"%s\"
+                              tell application \"System Events\"
+                                keystroke \"v\" using command down
+                              end tell'"
                   }
 
   :layers         {
@@ -34,14 +41,14 @@
   :main [
           {:des "Change input source to English by left_command; Russian by right_command."
            :rules [
-                    [:left_command    :left_command    nil {:alone {:input :en}}]
-                    [:right_command   :right_command   nil {:alone {:input :ru}}]
-                    [:left_shift      :left_shift      nil {:alone {:input :en}}]
-                    [:right_shift     :right_shift     nil {:alone {:input :ru}}]
+                    [:left_command    :left_command    nil {:alone {:input :en_typo}}]
+                    [:right_command   :right_command   nil {:alone {:input :ru_typo}}]
+                    [:left_shift      :left_shift      nil {:alone {:input :en_typo}}]
+                    [:right_shift     :right_shift     nil {:alone {:input :ru_typo}}]
                     [:!Cright_command :!Cright_command nil {:alone {:input :cs}}]
                     [:!Qleft_command  :!Qleft_command  nil {:alone {:input :cs}}]
-                    [:!Sright_shift   :!Sright_shift   nil {:alone {:input :cs}}]
-                    [:!Rleft_shift    :!Rleft_shift    nil {:alone {:input :cs}}]
+                    [:!Sright_shift   :!Sright_shift   nil {:alone {:input :ru}}]
+                    [:!Rleft_shift    :!Rleft_shift    nil {:alone {:input :en}}]
                   ]
           }
 
@@ -65,13 +72,14 @@
 
           {:des "Snippets"
            :rules [
-                    [:!Fopen_bracket   [:g :e :o :r :g :e :period :g :o :l :m :a :n :!S2 :g :m :a :i :l :period :c :o :m]]
-                    [:!Fclose_bracket  [:g :r :i :g :o :r :i :i :period :g :o :l :m :a :n :!S2 :v :e :e :a :m :period :c :o :m]]
+                    [:!Fopen_bracket   [:paste "george.golman@gmail.com"]]
+                    [:!Fclose_bracket  [:paste "grigorii.golman@veeam.com"]]
                   ]
           }
 
           {:des "Run applications"
            :rules [
+                    [:!Qperiod          [:open-app "System Settings"]]
                     [:!Creturn_or_enter [:open-app "iTerm"]]
                     [:!Qreturn_or_enter [:open-app "iTerm"]]
                   ]
@@ -99,7 +107,7 @@
                     [:return_or_enter [:open-app   "Terminal"]]
                     [:w               [:open-app   "Brave Browser"]]
                     [:e               [:open-app   "Telegram"]]
-                    [:r               [:open-app   "iTerm"]]
+                    [:r               [:open-app   "WarpPreview"]]
                     [:t               [:open-app   "Finder"]]
                     [:a               [:open-app   "RapidAPI"]]
                     [:s               [:open-app   "Visual Studio Code"]]
@@ -109,9 +117,8 @@
                     [:h               [:open-app   "Home"]]
                     [:m               [:open-app   "Mail"]]
                     [:i               [:open-app   "1Password 7"]]
-                    [:o               [:open-app   "Microsoft Teams"]]
                     [:p               [:open-app   "Pixelmator Pro"]]
-                    [:z               [:open-app   "zoom.us"]]
+                    [:z               [:open-app   "Zed"]]
                     [:x               [:open-app   "Spotify"]]
                     [:c               [:open-app   "Calendar"]]
                     [:b               [:open-app   "Safari"]]
