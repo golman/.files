@@ -41,6 +41,9 @@
     ~/.config/starship.toml:
       create: true
       path: starship.toml
+    ~/.config/topgrade.toml:
+      create: true
+      path: topgrade.toml
     ~/.config/tmux/tmux.conf:
       create: true
       path: tmux.conf
