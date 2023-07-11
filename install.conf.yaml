@@ -37,7 +37,7 @@
       path: init.vim
     ~/.config/ranger/rc.conf:
       create: true
-      path: ranger.config
+      path: ranger.conf
     ~/.config/starship.toml:
       create: true
       path: starship.toml
