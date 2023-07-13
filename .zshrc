@@ -1,17 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH="/usr/local/opt/wget/bin:$PATH"
-export PATH="/usr/local/opt/node@18/bin:$PATH"
-export PATH="/usr/local/opt/python@3/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/opt/openvpn/sbin:$PATH"
-# export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/Library/Python/3.11/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export GOPATH="$HOME/Projects/golang"
+export PATH="$GOPATH/bin:$PATH"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/golman/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -32,17 +29,16 @@ ZSH_THEME="robbyrussell"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode reminder    # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -54,6 +50,9 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -77,30 +76,54 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  brew
-  colored-man-pages
-  colorize
-  fzf
-  git
-  golang
-  gulp
-  macos
-  mvn
-  node
-  notify
-  npm
-  python
-  ruby
-  sudo
-  tmux
-  vscode
-  yarn
-  zsh-autosuggestions
-  zsh-completions
-  zsh-syntax-highlighting
-  zsh-z
-)
+if [[ $TERM_PROGRAM != "WarpTerminal" ]];
+    then
+        plugins=(
+          brew
+          colored-man-pages
+          colorize
+          fzf
+          git
+          golang
+          gulp
+          macos
+          mvn
+          node
+          notify
+          npm
+          python
+          ruby
+          sudo
+          tmux
+          vscode
+          yarn
+          zsh-autosuggestions
+          zsh-completions
+          zsh-syntax-highlighting
+          zsh-z
+        )
+    else
+        plugins=(
+          brew
+          colored-man-pages
+          colorize
+          fzf
+          git
+          golang
+          gulp
+          macos
+          mvn
+          node
+          npm
+          python
+          ruby
+          sudo
+          tmux
+          vscode
+          yarn
+          zsh-z
+        )
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,12 +135,7 @@ HISTFILE=~/.zsh_history
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
-# Set message for notifier
-zstyle ':notify:*' error-icon "https://media3.giphy.com/media/10ECejNtM1GyRy/200_s.gif"
-zstyle ':notify:*' error-title "wow such #fail"
-zstyle ':notify:*' success-icon "https://s-media-cache-ak0.pinimg.com/564x/b5/5a/18/b55a1805f5650495a74202279036ecd2.jpg"
-zstyle ':notify:*' success-title "very #success. wow"
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -132,35 +150,39 @@ zstyle ':notify:*' success-title "very #success. wow"
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run alias.
+# For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cat='bat'
-alias vim='nvim'
-alias ls='ls -G'
-alias ll='ls -lG'
-alias la='ls -laG'
+alias ls='lsd --all --long'
 alias af='curl -s  https://www.affirmations.dev/ | jq -r ".affirmation"'
 alias rlp='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
+alias пше='git'
+alias ff='fastfetch'
+alias tg='topgrade --disable mas'
+alias tm='tmux attach -t default || tmux new -s default'
 # for build project
 alias da="cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironment.name=golman -DskipTests"
+alias вф="cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironment.name=golman -DskipTests"
 alias dat="cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all -Denvironment.name=golman"
 alias dp="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Pdeploy-package -Denvironment.name=golman -DskipTests"
+alias вз="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Pdeploy-package -Denvironment.name=golman -DskipTests"
 alias dpt="cd ~/Projects/veeam.com/veeam-cms.apps && mvn clean install -Pdeploy-package -Denvironment.name=golman"
-alias dfull='cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all,deploy-all-publish -DskipTests -Denvironment.name=golman -Daem.port=4502 -Daem.publish.port=4503'
-alias dconf='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.config/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
-alias dpolicy='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.policy/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
-alias dusers='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.users/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
-alias dworkflows='cd ~/Projects/veeam.com/veeam-cms.extras/veeam-cms.workflows/ && mvn clean install -Pdeploy-package -Denvironment.name=golman && mvn clean install -Pdeploy-package -Denvironment.name=golman -Daem.port=4503'
-alias dgds='cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp8mYUzMmwLoS3o7hN1rjwyAWoQWC41dmUwFtPJVWur6EVjqsBwo8hBfmCnmT8fGtsiHHDC'
+alias deploy_full='cd ~/Projects/veeam.com/ && mvn clean install -Pdeploy-all,deploy-all-publish -DskipTests -Denvironment.name=golman -Daem.port=4502 -Daem.publish.port=4503'
+alias deploy_gds='cd ~/Projects/veeam.com/automation/prod-data/ && ./install.sh AKCp8mYUzMmwLoS3o7hN1rjwyAWoQWC41dmUwFtPJVWur6EVjqsBwo8hBfmCnmT8fGtsiHHDC'
 # connect to vpn
 alias vc='sudo openvpn ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/client.ovpn'
 # connect to vps
-alias cs="ssh golman.cis.local -l golman"
-alias cvs="ssh node.inf-01.ggolman.dev.prg.esx.cis.local -l golman"
+# alias cs="ssh golman.cis.local -l golman"
+alias cs="ssh node.inf-01.ggolman.dev.prg.esx.cis.local -l golman"
+alias cu="ssh 141.144.253.216 -l golman"
+
+# bash and zsh
+# if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+#     eval "$(starship init zsh)"
+# fi
 
 eval "$(starship init zsh)"
 

@@ -1,5 +1,4 @@
 theme = "tokyonight"
-# theme = "catppuccin_mocha"
 
 [editor]
 scrolloff = 13
