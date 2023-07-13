@@ -9,35 +9,28 @@ install [Homebrew](https://brew.sh/) 'n' run `brew bundle`
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-install [Oh My Zsh](https://ohmyz.sh/)
-```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
+install [Warp terminal](https://app.warp.dev/referral/2ERWL6)
 
 install [NvChad](https://nvchad.github.io/)
 ```
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ```
 
-###### using homebrew zsh or fish instead of the macos system default
-```
-sudo vim /etc/shells
-```
-add
-```
-/usr/local/bin/zsh
-/usr/local/bin/fish
-```
+###### using homebrew zsh or fish instead of the macOS system default
 run
 ```
-chsh -s /usr/local/bin/zsh
+echo $(which zsh) | sudo tee -a /etc/shells && chsh -s $(which zsh)
 ```
 or
 ```
-chsh -s /usr/local/bin/fish
+echo $(which fish) | sudo tee -a /etc/shells && chsh -s $(which fish)
 ```
 
-###### plugins for oh-my-zsh
+###### oh-my-zsh and plugins for it
+* [Oh My ZSH!](https://ohmyz.sh/)
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 * [Desktop notifications for long-running commands in zsh](https://github.com/marzocchi/zsh-notify)
 ```
 git clone git@github.com:marzocchi/zsh-notify.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/notify
@@ -50,7 +43,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.
 ```
 git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
-* [Fish shell like syntax highlighting for Zsh](https://github.com/zsh-users/zsh-syntax-highlighting)
+* [Fish-shell like syntax highlighting for Zsh](https://github.com/zsh-users/zsh-syntax-highlighting)
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
@@ -66,13 +59,14 @@ git clone https://github.com/agkozak/zsh-z.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 * [Make your prompt asynchronous to improve the reactivity](https://github.com/acomagu/fish-async-prompt)
 * [Pure-fish z directory jumping](https://github.com/jethrokuan/z)
 * [Augment your fish command line with fzf key bindings](https://github.com/PatrickF1/fzf.fish)
-* [sudope plugin for Fisher. Quickly put 'sudo' in your command](https://github.com/Dimentium/plugin-sudope)
+* [sudope plugin for Fisher. Quickly put "sudo" in your command](https://github.com/Dimentium/plugin-sudope)
+* [A utility tool powered by fzf for using git interactively](https://github.com/wfxr/forgit)
 
 ```
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 ```
-fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z PatrickF1/fzf.fish Dimentium/plugin-sudope
+fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z PatrickF1/fzf.fish Dimentium/plugin-sudope wfxr/forgit
 ```
 
 ###### enabling touch id authorization for sudo
@@ -84,24 +78,18 @@ auth       sufficient     pam_tid.so
 ```
 
 ###### honk!
-0. copy: `honk.aiff` to the `/Library/Audio/Sounds/Alerts/`
-1. open System Preferences > Sound > Sound Effects
-2. select "honk"
-3. HONK
+1. copy: `honk.aiff` to the `/Library/Audio/Sounds/Alerts/`
+2. open System Preferences > Sound > Sound Effects
+3. select "honk"
+4. HONK
 
 ### macOS useful terminal commands and links
 
 [macOS Setup Guide](https://sourabhbajaj.com/mac-setup/)
 
-[kitty — the fast, featureful, GPU based terminal emulator](https://sw.kovidgoyal.net/kitty/index.html)
-
-[iTerm2 + zsh + oh-my-zsh + Material Design The Most Power Full Terminal on macOS](https://medium.com/@rafavinnce/iterm2-zsh-oh-my-zsh-material-design-the-most-power-full-terminal-on-macos-332b1ee364a5)
-
 [Starship: Cross-Shell Prompt](https://github.com/starship/starship) — [The minimal, blazing-fast, and infinitely customizable prompt for any shell!](https://starship.rs/)
 
 [NvChad](https://github.com/NvChad/NvChad) — [An attempt to make neovim cli as functional as an IDE while being very beautiful, blazing fast](https://nvchad.github.io/)
-
-[How to use sudo with Touch ID on your Mac](https://www.imore.com/how-use-sudo-your-mac-touch-id)
 
 [Backup and Restore GPG key](https://www.jwillikers.com/backup-and-restore-a-gpg-key)
 
@@ -111,26 +99,7 @@ A collection of [ZSH frameworks, plugins, themes and tutorials](https://github.c
 
 [Clippy from Microsoft Office](https://github.com/Cosmo/Clippy) is back and runs on macOS! Written in Swift
 
-Reset the [smc](https://support.apple.com/en-us/HT201295), [nvram or pram](https://support.apple.com/en-us/HT204063)
-
-###### [using kitty as a custom terminal](https://25.wf/posts/2020-03-23-alfred-kitty.html) for [alfred](https://www.alfredapp.com)
-```
-on alfred_script(q)
-	tell application "kitty" to activate
-	do shell script "/Applications/Kitty.app/Contents/MacOS/kitty @ --to unix:/tmp/mykitty new-window --new-tab"
-	tell application "System Events" to keystroke q
-	tell application "System Events"
-		key code 36 -- enter key
-	end tell
-end alfred_script
-```
-
-###### [using iterm2 as a custom terminal](https://github.com/vitorgalvao/custom-alfred-iterm-scripts) for [alfred](https://www.alfredapp.com)
-```
-curl --silent 'https://raw.githubusercontent.com/vitorgalvao/custom-alfred-iterm-scripts/master/custom_iterm_script.applescript' | pbcopy
-```
-
-###### add [devicons](https://github.com/alexanderjeurissen/ranger_devicons) plugin to [ranger](https://ranger.github.io/)
+###### add [file glyphs / icon support](https://github.com/alexanderjeurissen/ranger_devicons) to [ranger](https://ranger.github.io/)
 ```
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
@@ -138,16 +107,16 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 echo "default_linemode devicons" >> ~/.config/ranger/rc.conf
 ```
 
-###### IntelliJ IDEA hide path in the project tree
+###### global packages
+```
+npm install --global npm-check-updates license-checker all-the-package-names
+```
+
+###### IntelliJ IDEA hides a path in the project tree
 
 Help → Edit Custom Properties… → add the following
 ```
 project.tree.structure.show.url=false
-```
-
-###### launch [sublime text](https://www.sublimetext.com/) from the command-line via `subl`
-```
-ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
 ###### reset launchpad
@@ -176,11 +145,6 @@ defaults write com.apple.dock springboard-columns -int 10
 defaults write com.apple.dock springboard-rows -int 5
 ```
 
-###### global packages
-```
-npm install --global npm-check-updates license-checker all-the-package-names
-```
-
 ###### remove all .ds_store files
 ```
 sudo find / -name '.DS_Store' -depth -exec rm {} \;
@@ -189,20 +153,12 @@ sudo find / -name '.DS_Store' -depth -exec rm {} \;
 sudo find / -name '.DS_Store' -type f -delete
 ```
 
-###### install and uninstall [homebrew](https://brew.sh/)
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
-```
-
 ###### generate a new rsa ssh key pair
 ```
 ssh-keygen -t rsa -b 2048 -C "george.golman@gmail.com"
 ```
 
-###### disable creation metadata files on network and usb volumes
+###### disable the creation of metadata files on network and usb volumes
 ```
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 ```
@@ -239,14 +195,14 @@ sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
 sudo xattr -rd com.apple.quarantine /Applications/xxx.app
 ```
 
-###### commit with random message
+###### commit with a random message
 ```
 git commit -m '$(curl -s whatthecommit.com/index.txt)'
 ```
 
 ###### weather
 ```
-curl http://wttr.in/spb
+curl https://wttr.in/prg
 ```
 
 ###### affirmation
@@ -257,14 +213,6 @@ curl -s  https://www.affirmations.dev/ | jq -r ".affirmation"
 ###### generate secure password and copy to clipboard
 ```
 LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
-```
-
-###### convert line endings in files
-```
-find . -type f | xargs -n1 dos2unix
-```
-```
-find . -name '*.js' -type f -exec dos2unix {} \;
 ```
 
 ###### create a ventura bootable installer. other versions [here](https://support.apple.com/en-us/HT201372)
