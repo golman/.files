@@ -66,7 +66,10 @@ git clone https://github.com/agkozak/zsh-z.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 ```
-fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z PatrickF1/fzf.fish Dimentium/plugin-sudope wfxr/forgit
+fisher install franciscolourenco/done acomagu/fish-async-prompt jethrokuan/z PatrickF1/fzf.fish Dimentium/plugin-sudope wfxr/forgit vitallium/tokyonight-fish
+```
+```
+fish_config theme save "TokyoNight Night"
 ```
 
 ###### enabling touch id authorization for sudo
