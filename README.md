@@ -61,6 +61,7 @@ git clone https://github.com/agkozak/zsh-z.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 * [Augment your fish command line with fzf key bindings](https://github.com/PatrickF1/fzf.fish)
 * [sudope plugin for Fisher. Quickly put "sudo" in your command](https://github.com/Dimentium/plugin-sudope)
 * [A utility tool powered by fzf for using git interactively](https://github.com/wfxr/forgit)
+* [TokyoNight colors for fish shell](https://github.com/vitallium/tokyonight-fish)
 
 ```
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
