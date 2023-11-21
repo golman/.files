@@ -50,21 +50,9 @@
     ~/.config/tmux/tmux.conf:
       create: true
       path: tmux.conf
-    ~/.warp/themes/nord.yaml:
+    ~/.warp/themes:
       create: true
-      path: ./warp themes/nord.yaml
-    ~/.warp/themes/one_dark.yaml:
-      create: true
-      path: ./warp themes/one_dark.yaml
-    ~/.warp/themes/tokyo_night_light.yml:
-      create: true
-      path: ./warp themes/tokyo_night_light.yml
-    ~/.warp/themes/tokyo_night_storm.yml:
-      create: true
-      path: ./warp themes/tokyo_night_storm.yml
-    ~/.warp/themes/tokyo_night.yml:
-      create: true
-      path: ./warp themes/tokyo_night.yml
+      path: warp themes
 
 - create:
     - ~/Projects
