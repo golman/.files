@@ -2,60 +2,37 @@
     link:
       create: true
       relink: true
+    shell:
+      quiet: false
+      stdin: true
+      stdout: true
+      stderr: true
 
-- clean: ['~']
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
 
 - link:
-    ~/.zshrc: .zshrc
-    ~/.gitconfig: .gitconfig
-    ~/.config/bat/config:
-      create: true
-      path: bat.config
+    ~/.config/bat:
+      path: ./config/bat
     ~/.config/fish/config.fish:
-      create: true
-      path: config.fish
-    ~/.config/helix/config.toml:
-      create: true
-      path: helix.toml
-    ~/.config/htop/htoprc:
-      create: true
-      path: htoprc.cfg
+      path: ./config/fish/config.fish
     ~/.config/karabiner.edn:
-      create: true
-      path: karabiner.edn
-    ~/.config/kitty/kitty.conf:
-      create: true
-      path: kitty.conf
-    ~/.config/kitty/macos-launch-services-cmdline:
-      create: true
-      path: kitty.cmd
-    ~/.config/mc/ini:
-      create: true
-      path: mc.ini
-    ~/.config/neofetch/config.conf:
-      create: true
-      path: neofetch.conf
-    ~/.vimrc:
-      create: true
-      path: init.vim
-    ~/.config/ranger/rc.conf:
-      create: true
-      path: ranger.conf
+      path: ./config/karabiner.edn
     ~/.config/starship.toml:
-      create: true
-      path: starship.toml
+      path: ./config/starship.toml
     ~/.config/topgrade.toml:
-      create: true
-      path: topgrade.toml
-    ~/.config/tmux/tmux.conf:
-      create: true
-      path: tmux.conf
+      path: ./config/topgrade.toml
     ~/.warp/themes:
-      create: true
-      path: warp themes
+      path: ./warp/themes
+    ~/.gitconfig: .gitconfig
+    ~/.vimrc: .vimrc
 
 - create:
     - ~/Projects
 
 - shell:
-  - [git submodule update --init --recursive, — installing submodules]
+    - description: — installing submodules
+      command: git submodule update --init --recursive

@@ -17,8 +17,8 @@
                   }
 
   :input-sources  {
-                    :en_typo {:input_source_id "org.sil.ukelele.keyboardlayout.t.english-ilyabirmantypography"}
-                    :ru_typo {:input_source_id "org.sil.ukelele.keyboardlayout.t.russian-ilyabirmantypography"}
+                    :en_typo {:input_source_id "org.sil.ukelele.keyboardlayout.t.english–ilyabirmantypography"}
+                    :ru_typo {:input_source_id "org.sil.ukelele.keyboardlayout.t.russian–ilyabirmantypography"}
                     :en {:input_source_id "^com.apple.keylayout.US$"}
                     :ru {:input_source_id "^com.apple.keylayout.Russian$"}
                     :cs {:input_source_id "^com.apple.keylayout.Czech$"}
@@ -26,12 +26,7 @@
 
   :templates      {
                     :open       "open \"%s\""
-                    :open-app   "open -a \"%s\""
-                    :paste "osascript -e '
-                              set the clipboard to \"%s\"
-                              tell application \"System Events\"
-                                keystroke \"v\" using command down
-                              end tell'"
+                    :open-app  "open -a \"%s\""
                   }
 
   :layers         {
@@ -54,13 +49,11 @@
 
           {:des "Caps Lock to Hyper, alone to Escape"
            :rules [
-                    [:caps_lock   :!CTOleft_shift nil {:alone :escape}]
-                    [:!Ccaps_lock :!Cescape]
-                    [:!Qcaps_lock :!Qescape]
+                    [:caps_lock :!CTOleft_shift nil {:alone :escape}]
                   ]
           }
 
-          {:des "Map hyper+hjkl to arrows, hyper+d to delete"
+          {:des "Map hyper+d to delete, hyper+hjkl to arrows"
            :rules [
                     [:!!d :delete_forward]
                     [:!!h :left_arrow]
@@ -70,18 +63,12 @@
                   ]
           }
 
-          {:des "Snippets"
-           :rules [
-                    [:!Fopen_bracket   [:paste "george.golman@gmail.com"]]
-                    [:!Fclose_bracket  [:paste "grigorii.golman@veeam.com"]]
-                  ]
-          }
-
           {:des "Run applications"
            :rules [
+                    [:!Cperiod          [:open-app "System Settings"]]
                     [:!Qperiod          [:open-app "System Settings"]]
-                    [:!Creturn_or_enter [:open-app "iTerm"]]
-                    [:!Qreturn_or_enter [:open-app "iTerm"]]
+                    [:!Creturn_or_enter [:open-app "WarpPreview"]]
+                    [:!Qreturn_or_enter [:open-app "WarpPreview"]]
                   ]
           }
 
@@ -104,23 +91,27 @@
 
           {:des "Run applications in launch mode"
            :rules [:launch-mode
-                    [:return_or_enter [:open-app   "Terminal"]]
-                    [:w               [:open-app   "Brave Browser"]]
-                    [:e               [:open-app   "Telegram"]]
-                    [:r               [:open-app   "Terminal"]]
-                    [:t               [:open-app   "Finder"]]
-                    [:a               [:open-app   "AnyConnect"]]
-                    [:s               [:open-app   "Visual Studio Code"]]
-                    [:d               [:open-app   "IntelliJ IDEA"]]
-                    [:f               [:open-app   "Fork"]]
-                    [:g               [:open-app   "Garmin Express"]]
-                    [:h               [:open-app   "Home"]]
-                    [:m               [:open-app   "Mail"]]
-                    [:p               [:open-app   "Pixelmator Pro"]]
-                    [:z               [:open-app   "Steam"]]
-                    [:x               [:open-app   "Spotify"]]
-                    [:c               [:open-app   "Calendar"]]
-                    [:b               [:open-app   "Safari"]]
+                    [:escape          [:open-app  "Activity Monitor"]]
+                    [:return_or_enter [:open-app  "Terminal"]]
+                    [:q               [:open-app  "1Password 7"]]
+                    [:w               [:open-app  "Arc"]]
+                    [:e               [:open-app  "Telegram"]]
+                    [:r               [:open-app  "WarpPreview"]]
+                    [:t               [:open-app  "Finder"]]
+                    [:s               [:open-app  "Visual Studio Code"]]
+                    [:f               [:open-app  "Fork"]]
+                    [:g               [:open-app  "Garmin Express"]]
+                    [:h               [:open-app  "Home"]]
+                    [:k               [:open-app  "Karabiner-Elements"]]
+                    [:p               [:open-app  "Pixelmator Pro"]]
+                    [:z               [:open-app  "Steam"]]
+                    [:x               [:open-app  "Spotify"]]
+                    [:c               [:open-app  "Calendar"]]
+                    [:v               [:open-app  "Reminders"]]
+                    [:b               [:open-app  "Safari"]]
+                    [:n               [:open-app  "Notes"]]
+                    [:m               [:open-app  "Mail"]]
+                    [:backslash       [:open      "/opt/homebrew/bin/goku"]]
                   ]
           }
         ]
