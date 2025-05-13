@@ -26,7 +26,7 @@
 
   :templates      {
                     :open       "open \"%s\""
-                    :open-app  "open -a \"%s\""
+                    :open-app   "open -a \"%s\""
                   }
 
   :layers         {
@@ -93,25 +93,27 @@
            :rules [:launch-mode
                     [:escape          [:open-app  "Activity Monitor"]]
                     [:return_or_enter [:open-app  "Terminal"]]
-                    [:q               [:open-app  "1Password 7"]]
                     [:w               [:open-app  "Arc"]]
                     [:e               [:open-app  "Telegram"]]
                     [:r               [:open-app  "WarpPreview"]]
                     [:t               [:open-app  "Finder"]]
+                    [:o               [:open-app  "OrbStack"]]
+                    [:p               [:open-app  "Pixelmator Pro"]]
                     [:s               [:open-app  "Visual Studio Code"]]
                     [:f               [:open-app  "Fork"]]
                     [:g               [:open-app  "Garmin Express"]]
                     [:h               [:open-app  "Home"]]
                     [:k               [:open-app  "Karabiner-Elements"]]
-                    [:p               [:open-app  "Pixelmator Pro"]]
+                    [:l               [:open-app  "FindMy"]]
                     [:z               [:open-app  "Steam"]]
                     [:x               [:open-app  "Spotify"]]
                     [:c               [:open-app  "Calendar"]]
                     [:v               [:open-app  "Reminders"]]
                     [:b               [:open-app  "Safari"]]
-                    [:n               [:open-app  "Notes"]]
+                    [:n               [:open-app  "Obsidian"]]
                     [:m               [:open-app  "Mail"]]
-                    [:backslash       [:open      "/opt/homebrew/bin/goku"]]
+                    [:backslash       [:open-app  "1Password 7"]]
+                    [:slash           [:open      "/opt/homebrew/bin/goku"]]
                   ]
           }
         ]
