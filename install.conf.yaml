@@ -36,3 +36,19 @@
 - shell:
     - description: — installing submodules
       command: git submodule update --init --recursive
+    - description: — installing homebrew
+      command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    - description: — installing software
+      command: brew bundle
+    - description: — adding fish to the enabled shells
+      command: echo $(which fish) | sudo tee -a /etc/shells
+    - description: — making fish the default shell
+      command: chsh -s $(which fish)
+    - description: — update bat themes
+      command: bat cache --build
+    - description: — install npm packages
+      command: npm install --global all-the-package-names license-checker neovim npm-check-updates
+    - description: — install fisher packages
+      command: fisher install dimentium/plugin-sudope franciscolourenco/done vitallium/tokyonight-fish
+    - description: — set fish shell theme
+      command: fish_config theme save "TokyoNight Night"
